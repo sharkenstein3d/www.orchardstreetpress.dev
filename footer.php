@@ -23,6 +23,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script src="../js/scrollToDiv.js"></script>
 
 </body>
 </html>
