@@ -105,6 +105,8 @@ add_action( 'widgets_init', 'osp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function osp_scripts() {
+	wp_enqueue_style( 'osp-fonts', 'https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Merriweather+Sans:700,800' );
+
 	wp_enqueue_style( 'osp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'osp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
