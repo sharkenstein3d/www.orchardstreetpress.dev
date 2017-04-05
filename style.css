@@ -224,7 +224,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #244242;
   font-family: "Bitter", serif;
   font-size: 16px;
   font-size: 1rem;
@@ -246,25 +246,25 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em; }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 740px) {
     h1 {
       font-size: 3em; } }
 
 h2 {
   font-size: 1.6em; }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 740px) {
     h2 {
       font-size: 2.6em; } }
 
 h3 {
   font-size: 1.2em; }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 740px) {
     h3 {
       font-size: 2.2em; } }
 
 h4 {
   font-size: 1em; }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 740px) {
     h4 {
       font-size: 2em; } }
 
@@ -456,11 +456,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #51BD9C; }
   a:visited {
-    color: purple; }
+    color: #51BD9C; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #244242; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -469,52 +469,6 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -640,7 +594,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 740px) {
     .hero {
       height: 100vh; } }
 
@@ -653,7 +607,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 740px) {
     .inner-hero {
       height: 25%;
       width: 65%; } }
@@ -678,7 +632,7 @@ a {
   font-weight: 900;
   line-height: 1em; }
   .site-title a {
-    color: white;
+    color: #51BD9C;
     text-decoration: none; }
     .site-title a:hover, .site-title a:focus {
       text-decoration: underline; }
@@ -688,6 +642,53 @@ a {
   font-size: .9em;
   font-style: italic;
   font-weight: 100; }
+
+#primary-menu {
+  padding: 0;
+  margin: 0; }
+
+.menu-btn {
+  position: fixed;
+  background-color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 1em;
+  height: 65px;
+  width: 100%;
+  z-index: 9999; }
+
+.menu-main-container {
+  position: fixed;
+  background-color: white;
+  border-bottom: 1px solid #244242;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 65px;
+  width: 100%;
+  z-index: 9999; }
+  .menu-main-container ul li {
+    display: inline;
+    padding: 5px; }
+  .menu-main-container a {
+    text-decoration: none; }
+    .menu-main-container a:hover, .menu-main-container a:focus {
+      color: #51BD9C;
+      border-bottom: 10px solid #51BD9C;
+      padding-bottom: 10px; }
+
+@media screen and (max-width: 740px) {
+  .menu-main-container {
+    display: none; } }
+
+@media screen and (min-width: 740px) {
+  .menu-btn {
+    display: none; } }
+
+@media screen and (max-width: 740px) {
+  #primary-menu {
+    display: none; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages

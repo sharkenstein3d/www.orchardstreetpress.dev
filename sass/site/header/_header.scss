@@ -55,7 +55,7 @@
 	line-height: 1em;
 
 	a {
-		color: white;
+		color: $color__link;
 		text-decoration: none;
 
 		&:hover,
@@ -71,3 +71,5 @@
 	font-style: italic;
 	font-weight: 100;
 }
+
+@import "header-menu";

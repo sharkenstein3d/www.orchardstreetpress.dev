@@ -44,7 +44,7 @@ function osp_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'osp' ),
+		'menu-1' => esc_html__( 'Header', 'osp' ),
 	) );
 
 	/*
@@ -109,7 +109,13 @@ function osp_scripts() {
 
 	wp_enqueue_style( 'osp-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'osp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'pushy', get_template_directory_uri() . '/bower_components/pushy/css/pushy.css' );
+
+	add_action( 'wp_enqueue_scripts', 'add_font_awesome' );
+
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+
+	wp_enqueue_script( 'pushy', get_template_directory_uri() . '/bower_components/pushy/js/pushy.min.js', array('jquery'), 'null', true );
 
 	wp_enqueue_script( 'osp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

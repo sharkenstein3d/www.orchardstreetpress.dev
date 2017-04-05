@@ -20,6 +20,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div class="menu-btn"><i class="menu-toggle fa fa-bars fa-2x"></i></div>
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+	</nav><!-- #site-navigation -->
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'osp' ); ?></a>
 
@@ -28,15 +32,6 @@
 			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<p><?php bloginfo('description'); ?> </p>
 		</div>
-		<div class="down-arrow">
-			<button type="button">DOWN</button>
-		</div>
-
 	</div>
-
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'osp' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-	</nav><!-- #site-navigation -->
 
 	<div id="content" class="site-content">
