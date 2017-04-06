@@ -28,10 +28,11 @@
 
 	ul li {
 		display: inline;
-		padding: 5px;
+		padding: 5px 10px;
 	}
 		a {
 			text-decoration: none;
+			text-transform: uppercase;
 			&:hover, &:focus {
 				color: $color__link;
 				border-bottom: 10px solid $color__link;

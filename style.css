@@ -670,9 +670,10 @@ a {
   z-index: 9999; }
   .menu-main-container ul li {
     display: inline;
-    padding: 5px; }
+    padding: 5px 10px; }
   .menu-main-container a {
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase; }
     .menu-main-container a:hover, .menu-main-container a:focus {
       color: #51BD9C;
       border-bottom: 10px solid #51BD9C;
